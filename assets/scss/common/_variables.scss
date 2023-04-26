@@ -1,0 +1,52 @@
+// Colors
+$c_rog : #C8102C;
+$c_red : #DC000C;
+$c_bg  : #070018;
+
+
+$c_negative         :#ff2323;
+$c_warning          :#f0ad4e;
+$c_positive         :#5cb85c;
+$c_neutral          :#5bc0de;
+
+// Typography
+$ff_base : 'ROG', 'NotoSans', sans-serif !default;
+$ff_ko   : 'NotoSans', sans-serif !default;
+
+$c_bk           :#000;
+$c_wt           :#fff;
+$g_s1           :#333;
+$g_s2           :#666;
+$g_s3           :#999;
+$g_s4           :#ccc;
+$g_s5           :#d5d5d5;
+$g_s6           :#f5f5f5;
+
+$c_light        :#f8f9fa;
+$c_dark         :#1D1D1D;
+$c_disable      :#979797;
+
+// Font Sizes
+$fs_base         : .83vw; // 16px
+$fs_large        : 1.2vw; // 23px
+$fs_small        : .67vw; // 13px
+
+$fs_h1           : 8.3vw; // 160px
+$fs_h2           : 5.7vw; // 110px
+$fs_h3           : 3.125vw; // 60px
+$fs_h4           : 2vw; // 40px
+$fs_h5           : 1.66vw; // 32px
+
+
+// Media Query Break Point
+$desktop_wide_width      : 2500px;
+$desktop_full_width      : 1920px;
+$desktop_l_width         : 1680px;
+$desktop_m_width         : 1440px;
+$desktop_s_width         : 1280px;
+$tablet_l_width          : 1024px;
+$tablet_s_width          : 840px;
+$tablet_ss_width         : 768px;
+$mobile_l_width          : 480px;
+$mobile_m_width          : 375px;
+$mobile_s_width          : 320px; 

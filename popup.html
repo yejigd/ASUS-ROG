@@ -1,0 +1,165 @@
+<div id="quiz_popup" class="popup">
+    <div class="popup__inner">
+        <div class="popup__ttl">
+            <h2>
+                ROG X SON
+                <span class="ko">퀴즈 정답 제출</span>
+            </h2>
+            <p class="ko">
+                정답 제출을 위해 하기 개인정보를 입력 및 제출해주세요. 정보 오기입으로 인한 불이익은 책임지지 않는 점,
+                <br class="md_only" />양해 부탁드립니다.
+            </p>
+        </div>
+        <div class="popup__frm">
+            <div class="frm_box">
+                <span class="frm_ttl">성함</span>
+                <span class="frm_val">
+                    <input type="text" name="name" id="quiz_popup_user_nm" />
+                </span>
+            </div>
+            <div class="frm_box">
+                <span class="frm_ttl">연락처</span>
+                <span class="frm_val">
+                    <input type="text" name="phone1" minlength="2" maxlength="3" id="quiz_popup_hp1" />
+                    <input type="text" name="phone2" minlength="3" maxlength="4" id="quiz_popup_hp2" />
+                    <input type="text" name="phone3" minlength="3" maxlength="4" id="quiz_popup_hp3" />
+                </span>
+            </div>
+            <div class="agree_box">
+                <h3>개인정보 수집 및 이용에 대한 동의 (필수)</h3>
+                <div class="agree_desc">
+                    ASUS(이하 “회사”라 함)는 귀하의 개인 정보를 대단히 중요하게 생각합니다. 회사는 정보통신망 이용촉진 및 정보보호 등에 관한
+                    법률, 개인정보 보호법, 통신비밀보호법, 전기통신사업법 등 정보통신 서비스 제공자가 준수하여야 할 관련 법규 상의
+                    개인정보보호 규정을 준수하며, 관련 법규에 의거한 개인정보취급방침을 정하여 회사의 서비스를 이용하는 고객의 권익 보호에
+                    최선을 다하고 있습니다. 회사 및 회사로부터 공인된 제 3자(무빙컨텐츠솔루션)는 회사의
+                    개인정보처리방침(https://rog.asus.com/kr/terms-of-notice/privacy_policy/)에 따라 귀하가 제공한 개인정보를 본 이벤트 안내
+                    및 서비스 제공과 관련된 커뮤니케이션에 사용할 수 있으며, 제공된 개인정보는 이벤트 종료 후 폐기됩니다. 귀하의 정보는 기밀
+                    유지 및 보안에 대한 엄격한 정보 관리 의무에 따라 관리됩니다. 본 이벤트 참여에 대한 ASUS 및 위탁업체의 정보 제공에
+                    동의하시겠습니까? 귀하는 개인정보 수집 및 이용에 대하여 동의하지 않을 수 있으며, 이 경우 이벤트 참여가 제한될 수
+                    있습니다.
+                </div>
+
+                <div class="frm_agree">
+                    <span class="frm_item">
+                        <input type="radio" name="quiz_agr" value="Y" id="quiz_y" />
+                        <label for="quiz_y">동의합니다</label>
+                    </span>
+                    <span class="frm_item">
+                        <input type="radio" name="quiz_agr" value="N" id="quiz_n" />
+                        <label for="quiz_n">동의하지 않습니다</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn l_btn submit_btn" onclick="_answer('quiz_popup');">정답 제출하기</button>
+        <button type="button" class="cls_popup">
+            <span class="blind">팝업 닫기</span>
+        </button>
+    </div>
+</div>
+
+<div id="quiz_check" class="popup">
+    <div class="popup__inner">
+        <div class="popup__ttl">
+            <h2>
+                ROG X SON
+                <span class="ko">퀴즈 참여 확인</span>
+            </h2>
+            <p class="ko">
+                퀴즈 이벤트 참여 여부 확인을 위한 입력 화면입니다. 퀴즈 정답 제출 시 입력하셨던 개인 정보로 입력 부탁드립니다. 참여 확인은
+                현재 진행중인 퀴즈에 한하여 가능합니다.
+            </p>
+        </div>
+        <div class="popup__frm">
+            <div class="frm_box">
+                <span class="frm_ttl">성함</span>
+                <span class="frm_val">
+                    <input type="text" name="name" id="quiz_check_user_nm" />
+                </span>
+            </div>
+            <div class="frm_box">
+                <span class="frm_ttl">연락처</span>
+                <span class="frm_val">
+                    <input type="text" name="phone1" minlength="2" maxlength="3" id="quiz_check_user_hp1" />
+                    <input type="text" name="phone2" minlength="3" maxlength="4" id="quiz_check_user_hp2" />
+                    <input type="text" name="phone3" minlength="3" maxlength="4" id="quiz_check_user_hp3" />
+                </span>
+            </div>
+        </div>
+        <button type="button" class="btn l_btn check_btn" onclick="_answer('quiz_check');">참여 확인하기</button>
+        <button type="button" class="cls_popup">
+            <span class="blind">팝업 닫기</span>
+        </button>
+    </div>
+</div>
+
+<div id="url_event" class="popup">
+    <div class="popup__inner">
+        <div class="popup__ttl">
+            <h2>
+                ROG X SON
+                <span class="ko">인증샷 게재 URL 제출</span>
+            </h2>
+        </div>
+        <div class="popup__frm">
+            <div class="frm_box">
+                <span class="frm_ttl">성함</span>
+                <span class="frm_val">
+                    <input type="text" name="sns_name" id="sns_user_nm" />
+                </span>
+            </div>
+            <div class="frm_box">
+                <span class="frm_ttl">연락처</span>
+                <span class="frm_val">
+                    <input type="text" name="sns_phone1" minlength="2" maxlength="3" id="sns_user_hp1" />
+                    <input type="text" name="sns_phone2" minlength="3" maxlength="4" id="sns_user_hp2" />
+                    <input type="text" name="sns_phone3" minlength="3" maxlength="4" id="sns_user_hp3" />
+                </span>
+            </div>
+            <div class="frm_box">
+                <span class="frm_ttl ind">게재 SNS URL</span>
+                <span class="frm_val">
+                    <input type="text" name="sns_url" id="sns_url" />
+                </span>
+            </div>
+            <div class="agree_box">
+                <h3>개인정보 수집 및 이용에 대한 동의 (필수)</h3>
+                <div class="agree_desc">
+                    ASUS(이하 “회사”라 함)는 귀하의 개인 정보를 대단히 중요하게 생각합니다. 회사는 정보통신망 이용촉진 및 정보보호 등에 관한
+                    법률, 개인정보 보호법, 통신비밀보호법, 전기통신사업법 등 정보통신 서비스 제공자가 준수하여야 할 관련 법규 상의
+                    개인정보보호 규정을 준수하며, 관련 법규에 의거한 개인정보취급방침을 정하여 회사의 서비스를 이용하는 고객의 권익 보호에
+                    최선을 다하고 있습니다. 회사 및 회사로부터 공인된 제 3자(무빙컨텐츠솔루션)는 회사의
+                    개인정보처리방침(https://rog.asus.com/kr/terms-of-notice/privacy_policy/)에 따라 귀하가 제공한 개인정보를 본 이벤트 안내
+                    및 서비스 제공과 관련된 커뮤니케이션에 사용할 수 있으며, 제공된 개인정보는 이벤트 종료 후 폐기됩니다. 귀하의 정보는 기밀
+                    유지 및 보안에 대한 엄격한 정보 관리 의무에 따라 관리됩니다. 본 이벤트 참여에 대한 ASUS 및 위탁업체의 정보 제공에
+                    동의하시겠습니까? 귀하는 개인정보 수집 및 이용에 대하여 동의하지 않을 수 있으며, 이 경우 이벤트 참여가 제한될 수
+                    있습니다.
+                </div>
+
+                <div class="frm_agree">
+                    <span class="frm_item">
+                        <input type="radio" name="sns_agr" value="Y" id="sns_y" />
+                        <label for="sns_y">동의합니다</label>
+                    </span>
+                    <span class="frm_item">
+                        <input type="radio" name="sns_agr" value="N" id="sns_n" />
+                        <label for="sns_n">동의하지 않습니다</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn l_btn url_submit" onclick="_answer('url_event');">인증 URL 제출</button>
+        <button type="button" class="cls_popup">
+            <span class="blind">팝업 닫기</span>
+        </button>
+    </div>
+</div>
+
+<div id="vid_popup" class="popup">
+    <div class="popup__video">
+        <div id="player" class="video__area"></div>
+    </div>
+    <button type="button" class="cls_popup">
+        <span class="blind">팝업 닫기</span>
+    </button>
+</div>

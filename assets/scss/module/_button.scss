@@ -1,0 +1,387 @@
+$colors: (
+    nav :#130c80,
+    yel :#fbbc17,
+    org :#ff951b,
+    ord :#ff4f00,
+    grn :#00a477,
+    pur :#c7005c,
+    vio :#52006a,
+    blu :#0a00cb,
+    black :#000,
+    white :#fff
+);
+$d_cc : $c_wt;
+
+.btn {
+    display: inline-block;
+    font: {
+        size:#{'min(.875rem, .73vw)'};
+        weight:600;
+    }
+    line-height:1.25rem;
+    padding:.6875rem 1rem;
+    margin:10px 0;
+    border: 2px solid transparent;
+    text-transform:uppercase;
+    @include border-radius(6px);
+    @include transition_All();
+
+    &[disabled], 
+    &.disabled,
+    &:disabled {
+        pointer-events: none;
+        opacity: .65;
+    }
+
+    &.shadow {
+        @include box-shadow(1px 1px 2px rgba(0,0,0,.15));
+    }
+
+    @each $color, $hex in $colors {
+        &_#{$color} {
+            background: $hex;
+            border-color: $hex;
+            @if $color == white {
+                color: $c_bk;
+            } @else {
+                color: $d_cc;
+            }
+    
+            &:hover {
+                background: darken($hex, 12%);
+                border-color: darken($hex, 12%);
+            }
+    
+            &_out {
+                border-color: $hex;
+                color: $hex;
+
+                @if $color == white {
+                    &:hover {
+                        background: $hex;
+                        color: $c_bk;
+                    }
+                } @else {
+                    &:hover {
+                        background: $hex;
+                        color: $d_cc;
+                    }
+                }
+            }
+        }
+    }
+
+    &_grayish {
+        background: $g_s6;
+        border-color: $g_s5;
+        color: $g_s3;
+
+        &:hover {
+            background: darken($g_s6, 12%);
+            border-color: darken($g_s5, 12%);
+        }
+
+        &_out {
+            border-color: $g_s6;
+            color: $g_s3;
+
+            &:hover {
+                background: $g_s6;
+                color: $g_s3;
+            }
+        }
+    }
+
+    &_positive {
+        background: $c_positive;
+        border-color: $c_positive;
+        color: $d_cc;
+
+        &:hover {
+            background: darken($c_positive, 12%);
+            border-color: darken($c_positive, 12%);
+        }
+        
+        &_out {
+            border-color: $c_positive;
+            color: $c_positive;
+
+            &:hover {
+                background: $c_positive;
+                color: $d_cc;
+            }
+        }
+    }
+
+    &_negative {
+        background: $c_negative;
+        border-color: $c_negative;
+        color: $d_cc;
+
+        &:hover {
+            background: darken($c_negative, 12%);
+            border-color: darken($c_negative, 12%);
+        }
+        
+        &_out {
+            border-color: $c_negative;
+            color: $c_negative;
+
+            &:hover {
+                background: $c_negative;
+                color: $d_cc;
+            }
+        }
+    }
+
+    &_warning {
+        background: $c_warning;
+        border-color: $c_warning;
+        color: $d_cc;
+
+        &:hover {
+            background: darken($c_warning, 12%);
+            border-color: darken($c_warning, 12%);
+        }
+        
+        &_out {
+            border-color: $c_warning;
+            color: $c_warning;
+
+            &:hover {
+                background: $c_warning;
+                color: $d_cc;
+            }
+        }
+    }
+
+    &_neutral {
+        background: $c_neutral;
+        border-color: $c_neutral;
+        color: $d_cc;
+
+        &:hover {
+            background: darken($c_neutral, 12%);
+            border-color: darken($c_neutral, 12%);
+        }
+        
+        &_out {
+            border-color: $c_neutral;
+            color: $c_neutral;
+
+            &:hover {
+                background: $c_neutral;
+                color: $d_cc;
+            }
+        }
+    }
+
+    &_light {
+        background: $c_light;
+        border-color: $c_light;
+        color: $c_dark;
+
+        &:hover {
+            background: darken($c_light, 12%);
+            border-color: darken($c_light, 12%);
+        }
+        
+        &_out {
+            border-color: $c_light;
+            color: $c_light;
+
+            &:hover {
+                background: $c_light;
+                color: $c_dark;
+            }
+        }
+    }
+
+    &_dark {
+        background: $c_dark;
+        border-color: $c_dark;
+        color: $c_light;
+
+        &:hover {
+            background: darken($c_dark, 12%);
+            border-color: darken($c_dark, 12%);
+        }
+        
+        &_out {
+            border-color: $c_dark;
+            color: $c_dark;
+
+            &:hover {
+                background: $c_dark;
+                color: $c_light;
+            }
+        }
+    }
+
+    /* Sizes */
+    &_lg {
+        padding: .625rem 2rem;
+        font-size: 1rem;
+    }
+
+    &_sm {
+        padding: .125rem .625rem;
+        line-height: 1.25rem;
+        font-size: .75rem;
+    }
+
+    /* button area */
+    &__area {
+        font-size: 0;
+
+        &.center {
+            text-align: center;
+        }
+
+        &.right {
+            text-align: right;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    &_full {
+        display: block;
+        width: 100%;
+        margin: .25rem 0;
+    }
+
+    &_half {
+        float: left; 
+        width: 50%;
+        margin: 0;
+        @include border-radius(0);
+    }
+
+    // rounded button
+    &.round {
+        @include border-radius(2.5rem);
+    }
+
+    $links: (
+        nav : 130c80,
+        yel : fbbc17,
+        org : ff951b,
+        ord : ff4f00,
+        grn : 00a477,
+        pur : c7005c,
+        vio : 52006a,
+        blu : 0a00cb,
+        blk : 000000,
+        wht : ffffff
+    );
+    
+    .arr {
+        display:inline-block;
+        width:20px;
+        height:18px;
+        margin:0 0 0 18px;
+        vertical-align:top;
+
+        @each $l_cc, $l_hex in $links {
+            &.#{$l_cc} {
+                background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='18.2'%3E%3Cpath d='m11.9 0 7.6 7.6L21 9.1l-1.5 1.5-7.6 7.6-1.6-1.5 6.6-6.5H0V8h16.9l-6.6-6.5Z' fill='%23#{$l_hex}'/%3E%3C/svg%3E") 50% 50%/contain no-repeat;
+            }
+        }
+    }
+
+    .download {
+        display:inline-block;
+        width:20px;
+        height:20px;
+        margin:0 0 0 6px;
+        vertical-align:top;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.9' height='19.9'%3E%3Cpath data-name='backtop (Background)' fill='none' d='M19.9 19.9H0V0h19.9z'/%3E%3Cpath data-name='backtop' d='M9.3 1.4h1.3v10.8l5.1-5 .9.8-6.2 6.1a.6.6 0 0 1-.9 0L3.2 8l1-.9 5.1 5.1V1.4ZM2.5 16.2h15v1.2h-15v-1.2Z' fill='rgba(0,0,0,0.9)'/%3E%3C/svg%3E") 50% 50%/contain no-repeat;
+    }
+}
+
+// text button
+.btn[class*="text_"] {
+    padding: .25rem .5rem;
+    font-weight: 500;
+}
+
+.text {
+    &_primary {
+        color: $pmg_nav;
+
+        &:hover {
+            color: darken($pmg_nav, 12%);
+        }
+    }
+
+    &_positive {
+        color: $c_positive; 
+        
+        &:hover {
+            color: darken($c_positive, 12%);
+        }
+    }
+
+    &_negative {
+        color: $c_negative; 
+        
+        &:hover {
+            color: darken($c_negative, 12%);
+        }
+    }
+
+    &_warning {
+        color: $c_warning; 
+        
+        &:hover {
+            color: darken($c_warning, 12%);
+        }
+    }
+
+    &_neutral {
+        color: $c_neutral; 
+        
+        &:hover {
+            color: darken($c_neutral, 12%);
+        }
+    }
+
+    &_light {
+        color: $c_light; 
+        
+        &:hover {
+            color: darken($c_light, 12%);
+        }
+    }
+
+    &_dark {
+        color: $c_dark; 
+        
+        &:hover {
+            color: darken($c_dark, 12%);
+        }
+    }
+    
+    &_grayish {
+        color: $g_s3; 
+        
+        &:hover {
+            color: darken($g_s3, 12%);
+        }
+    }
+}
+
+
+@include tablet_ss {
+    .btn {
+        line-height: 1.25rem;
+        font-size: .75rem;
+        padding: .125rem .625rem;
+        @include border-radius(2px);
+    }
+}

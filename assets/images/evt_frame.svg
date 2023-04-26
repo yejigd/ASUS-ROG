@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 157 61" xml:space="preserve">
+  <style>
+    .st0 {
+      fill: #c8102c
+    }
+  </style>
+  <g>
+    <g>
+      <path class="st0" d="M0 0h4.8v4.8H0z" />
+    </g>
+    <g>
+      <path class="st0" d="M152.2 0h4.8v4.8h-4.8z" />
+    </g>
+    <g>
+      <path class="st0" d="M0 56.2h4.8V61H0z" />
+    </g>
+    <g>
+      <path class="st0" d="M152.2 56.2h4.8V61h-4.8z" />
+    </g>
+    <g>
+      <path id="패스_5096-2" class="st0" d="M155 59H2V2h153v57zM4 58.2h149V2.8H4v55.4z" />
+    </g>
+  </g>
+</svg>

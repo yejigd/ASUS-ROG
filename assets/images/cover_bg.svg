@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2710" data-name="사각형 2710" width="1920" height="1080" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="합치기_15" x="-139.61" y="4" width="2246.629" height="1193.722" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="red" flood-opacity="0.8"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="마스크_그룹_39" data-name="마스크 그룹 39" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#합치기_15)">
+      <path id="합치기_15-2" data-name="합치기 15" d="M11712.7,5418.721V4345.774H11686v-2.064h1.243l35.71-35.71h159.115l23-23h236.413l32.709,32.709H12212l-8.136-8.136h143.924l9.317-9.32h101.731l-.311,9.24-12.642,12.645h-86.565l8.617,8.617h822.744l13.045-13.045h180.708l32.709-32.709h236.413l23,23h159.118l36.95,36.953-26.955.082V5418.721Zm1249.14-1096.716s-11.977-12.251-12.256-12.251h26.453l12.384,12.384Zm-41.417,0s-11.977-12.251-12.255-12.251h26.452l12.385,12.384Zm-41.417,0s-11.973-12.251-12.252-12.251h26.45l12.384,12.384Zm-41.413,0s-11.977-12.251-12.255-12.251h26.453l12.384,12.384Zm-41.413,0s-11.977-12.251-12.256-12.251h26.453l12.384,12.384Z" transform="translate(-11795.61 -4251)" fill="#c8102c"/>
+    </g>
+  </g>
+</svg>
